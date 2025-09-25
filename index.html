@@ -16,14 +16,7 @@
             <div class="logo">
                 <img src="img/logo_renacer.png" alt="Logo Renacer">
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nuestra Historia</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
-               
-
-            </ul>
+            
             <div class="search-bar">
                 <input type="text" placeholder="Buscar...">
                 <button type="submit">🔍</button>
@@ -109,20 +102,20 @@
     <div class="product-grid">
         <div class="product-card">
             <img src="img/cuarto.jpeg" alt="Café Renacer 250g">
-            <h3>Café Tueste Medio 250g</h3>
-            <p>Descripción breve del producto...</p>
+            <h3>Café 250g</h3>
+            <p>Este café puedes adquirirlo en categoría alta que es RENACER o en el café familiar tradicional CAFECHITO</p>
             <button class="add-to-cart-btn">Comprar Ahora</button>
         </div>
         <div class="product-card">
             <img src="img/medio.jpeg" alt="Café Renacer 500g">
-            <h3>Café Tueste Oscuro 500g</h3>
-            <p>Descripción breve del producto...</p>
+            <h3>Café 500g</h3>
+            <p>Este café puedes adquirirlo en categoría alta que es RENACER o en el café familiar tradicional CAFECHITO</p>
             <button class="add-to-cart-btn">Comprar Ahora</button>
         </div>
         <div class="product-card">
             <img src="img/kilo.jpeg" alt="Café Renacer 1kg">
-            <h3>Café Renacer 1 Kg</h3>
-            <p>Descripción breve del producto...</p>
+            <h3>Café 1 Kg</h3>
+            <p>Este café puedes adquirirlo en categoría alta que es RENACER o en el café familiar tradicional CAFECHITO</p>
             <button class="add-to-cart-btn">Comprar Ahora</button>
         </div>
     </div>
@@ -155,49 +148,41 @@
 
 <footer class="main-footer">
   <div class="footer-content">
+
     <!-- Columna 1: Información de contacto -->
     <div class="footer-column contact-info">
       <h4>Contáctanos</h4>
       <p>📞 <a href="https://wa.me/50660073737" target="_blank" rel="noopener">6007-3737</a></p>
-      <p><span>📍</span> Costa Rica</p>
+      <p>📍 Costa Rica</p>
       <img src="img/Café_Renacer-1024.jpeg" alt="Código QR" class="qr-footer">
     </div>
 
     <!-- Columna 2: Opciones de tueste -->
     <div class="footer-column tueste-info">
-      <h4>Tueste y Presentación</h4>
-      <ul class="tueste-list">
-        <li>
-          <label><input type="checkbox" name="tueste" value="media" checked> Tueste Media</label>
-        </li>
-        <li>
-          <label><input type="checkbox" name="tueste" value="oscura"> Tueste Oscura</label>
-        </li>
-      </ul>
-
-      <ul class="size-list">
-        <li>
-          <label><input type="checkbox" name="size" value="250g" checked> 250g</label>
-        </li>
-        <li>
-          <label><input type="checkbox" name="size" value="500g"> 500g</label>
-        </li>
-        <li>
-          <label><input type="checkbox" name="size" value="1kg"> 1 kilo</label>
-        </li>
-      </ul>
+      <h4>Opciones de tueste</h4>
+      <div class="tueste-buttons">
+        <button class="tueste-btn" data-tueste="media">Tueste Medio</button>
+        <button class="tueste-btn" data-tueste="oscura">Tueste Oscuro</button>
+      </div>
+      <div class="size-buttons" style="margin-top:10px;">
+        <button class="size-btn" data-size="250g">250g</button>
+        <button class="size-btn" data-size="500g">500g</button>
+        <button class="size-btn" data-size="1kg">1kg</button>
+      </div>
     </div>
 
     <!-- Columna 3: Elemento decorativo -->
     <div class="footer-column decorative-elements">
       <img src="img/lapa.png" alt="Perezoso y Lapa" class="sloth-macaw">
     </div>
+
   </div>
 
   <p class="copyright">
     &copy; 2023 Renacer Café de Costa Rica. Todos los derechos reservados.
   </p>
 </footer>
+
 
 
     <script src="js/script.js"></script>

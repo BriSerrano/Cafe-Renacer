@@ -558,6 +558,115 @@ body {
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
+.tueste-btn, .size-btn {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin: 5px 5px 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tueste-btn:hover, .size-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  transform: scale(1.05);
+}
+/* === ANIMACIONES GENERALES === */
+
+/* Fade-in al cargar elementos */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Bounce sutil para botones */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.add-to-cart-btn:hover {
+  animation: bounce 0.4s;
+}
+
+/* Zoom suave para imágenes de productos */
+.product-card img {
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Zoom suave para imágenes de story-segment y process-card */
+.story-segment .segment-image img,
+.process-card img {
+  transition: transform 0.5s ease;
+}
+
+.story-segment .segment-image img:hover,
+.process-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Animación de botones de tueste y tamaño */
+.tueste-btn, .size-btn {
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.tueste-btn:hover, .size-btn:hover {
+  transform: scale(1.1) rotate(-1deg); /* pequeño giro divertido */
+}
+
+/* Aparecer al hacer scroll (ScrollReveal simple) */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación suave para el hero title y subtitle */
+.hero-title {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero-subtitle {
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Animación de parpadeo suave para iconos dorados (ej. ☕) */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0.5; }
+}
+
+.notes-section ul li::before {
+  animation: blink 2s infinite;
+}
+
+/* Botón modo oscuro */
+.dark-mode-btn {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+  transform: scale(1.15) rotate(-5deg);
+}
 
 /* Responsivo */
 @media (max-width: 768px) {
