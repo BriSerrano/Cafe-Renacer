@@ -1,41 +1,57 @@
-/* Importar fuentes si las usas, por ejemplo de Google Fonts */
+/* =========================
+   FUENTES
+========================= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap');
 
-/* Variables CSS para colores y fuentes comunes */
+/* =========================
+   VARIABLES DE COLORES Y TIPOGRAFÍA
+========================= */
 :root {
-    --primary-color: #4b9664; /* Un verde vibrante y natural, como la hoja de café */
-    --secondary-color: #090d46; /* Un azul oscuro, profundo, para contraste y elegancia */
-    --accent-color: #e6b800; /* Un dorado o amarillo cálido, como el grano tostado */
-    --text-color-dark: #583711; /* Un marrón oscuro para el texto principal */
-    --text-color-light: #f8f8f8; /* Blanco roto para texto en fondos oscuros */
-    --background-light: #f4eded; /* Un color crema suave para fondos claros */
-    --background-dark: #2c1a12; /* Café oscuro para el footer o secciones oscuras */
+    /* Colores principales */
+    --primary-green: #4CAF50;      /* Verde vibrante */
+    --secondary-brown: #6D4C41;    /* Café profundo */
+    --accent-yellow: #FFC107;      /* Amarillo cálido */
+    --light-bg: #FFF8F0;           /* Fondo crema */
+    --dark-bg: #2E1F1A;            /* Fondo oscuro para footer y notas */
+    --text-dark: #3E2723;          /* Marrón oscuro para texto principal */
+    --text-light: #FDF5E6;         /* Blanco suave */
 
-    --font-heading: 'Pacifico', cursive; /* Para títulos estilo "Rennacer" */
+    /* Tipografía */
+    --font-heading: 'Pacifico', cursive;
     --font-body: 'Montserrat', sans-serif;
 }
 
+/* =========================
+   ESTILOS GENERALES
+========================= */
 body {
     font-family: var(--font-body);
+    background-color: var(--light-bg);
+    color: var(--text-dark);
     margin: 0;
     padding: 0;
-    background-color: var(--background-light);
-    color: var(--text-color-dark);
     line-height: 1.6;
-    overflow-x: hidden; /* Evita el scroll horizontal */
 }
 
-/* Patrón de fondo del footer (simulando el carretillo) */
-.main-footer {
-    background-image: url('../img/background_pattern.png'); /* Asegúrate de tener una imagen de patrón */
-    background-repeat: repeat;
-    background-size: cover; /* o 'contain' dependiendo de tu imagen */
-    /* Otros estilos del footer se definen más abajo */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    margin: 0 0 15px;
 }
 
-/* Header */
+a {
+    text-decoration: none;
+    color: var(--secondary-brown);
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+/* =========================
+   HEADER Y NAVBAR
+========================= */
 .main-header {
-    width: 100%;
     position: relative;
 }
 
@@ -43,958 +59,618 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    background-color: var(--primary-color); /* Usamos el verde principal */
-    color: var(--text-color-light);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra sutil para darle profundidad */
+    padding: 20px 5%;
+    background: linear-gradient(90deg, var(--primary-green), var(--secondary-brown));
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 0 0 20px 20px;
 }
 
 .navbar .logo img {
-    height: 60px; /* Ajusta el tamaño de tu logo, un poco más grande */
-    object-fit: contain; /* Asegura que la imagen no se recorte */
+    height: 70px;
 }
 
 .navbar .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .navbar .nav-links a {
-    color: var(--text-color-light);
-    text-decoration: none;
+    color: var(--text-light);
     font-weight: bold;
     font-size: 1.1em;
-    transition: color 0.3s ease, transform 0.2s ease; /* Añadimos transform para efecto sutil */
+    transition: color 0.3s ease;
 }
 
 .navbar .nav-links a:hover {
-    color: var(--accent-color); /* Usa el dorado para el hover */
-    transform: translateY(-2px); /* Pequeño levantamiento al pasar el mouse */
+    color: var(--accent-yellow);
 }
 
+/* =========================
+   SEARCH BAR
+========================= */
 .search-bar {
     display: flex;
     align-items: center;
 }
 
 .search-bar input {
-    padding: 10px 15px; /* Un poco más de padding */
+    padding: 12px 18px;
+    border-radius: 25px;
     border: none;
-    border-radius: 25px; /* Más redondeado */
-    margin-right: 8px; /* Más espacio */
-    font-size: 1em; /* Tamaño de fuente estándar */
-    background-color: rgba(255,255,255,0.9); /* Fondo blanco semitransparente */
-    color: var(--text-color-dark);
+    font-size: 1em;
+    margin-right: 10px;
+    background: rgba(255,255,255,0.9);
 }
 
 .search-bar button {
-    background-color: var(--accent-color); /* Usa el dorado para el botón */
-    color: var(--secondary-color); /* Texto en azul oscuro */
-    border: none;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    width: 40px; /* Tamaño fijo para el botón */
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    background-color: var(--accent-yellow);
+    color: var(--secondary-brown);
+    font-size: 1.2em;
+    transition: transform 0.2s ease;
 }
 
 .search-bar button:hover {
-    background-color: var(--primary-color); /* Al pasar el mouse, cambia a verde */
-    color: var(--text-color-light); /* Texto blanco */
-    transform: scale(1.05); /* Ligeramente más grande */
+    transform: scale(1.1);
 }
 
+/* =========================
+   HERO BANNER
+========================= */
 .hero-banner {
     position: relative;
     width: 100%;
-    height: 450px; /* Altura del banner ligeramente mayor */
+    height: 500px;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--text-color-light);
+    color: var(--text-light);
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 }
 
 .hero-banner img {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(0.65) saturate(1.1); /* Oscurecer un poco más y saturar */
+    filter: brightness(0.7) saturate(1.2);
+    transition: transform 0.5s ease;
+}
+
+.hero-banner img:hover {
+    transform: scale(1.05);
 }
 
 .hero-title {
-    font-family: var(--font-heading);
-    font-size: 4.5em; /* Título un poco más grande */
-    margin: 0;
-    text-shadow: 4px 4px 8px rgba(0,0,0,0.6); /* Sombra más pronunciada */
-    letter-spacing: 2px; /* Espaciado entre letras */
-    z-index: 1;
+    font-size: 4em;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+    margin: 0 20px;
 }
 
 .hero-subtitle {
-    font-size: 1.8em; /* Subtítulo más grande */
+    font-size: 1.8em;
     margin-top: 15px;
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-    font-weight: 300; /* Más ligero */
-    z-index: 1;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+    margin: 0 20px;
 }
 
-/* Main Content */
+/* =========================
+   HERO BANNER RESPONSIVE
+========================= */
+@media (max-width: 1200px) {
+    .hero-banner {
+        height: 450px;
+    }
+    .hero-title { font-size: 3.5em; }
+    .hero-subtitle { font-size: 1.6em; }
+}
+
+@media (max-width: 992px) {
+    .hero-banner {
+        height: 400px;
+    }
+    .hero-title { font-size: 3em; }
+    .hero-subtitle { font-size: 1.4em; }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 350px;
+    }
+    .hero-title { font-size: 2.5em; }
+    .hero-subtitle { font-size: 1.2em; }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        height: 300px;
+        padding: 0 10px;
+    }
+    .hero-title { font-size: 2em; }
+    .hero-subtitle { font-size: 1em; }
+}
+
+/* =========================
+   SECCIONES PRINCIPALES
+========================= */
 .main-content {
-    padding: 60px 5%; /* Más padding vertical */
     max-width: 1200px;
     margin: 0 auto;
+    padding: 60px 5%;
 }
 
-/* Títulos de secciones principales */
-.products-section h2, .about-us-section h2 {
-    text-align: center;
-    font-family: var(--font-heading);
-    font-size: 3em; /* Títulos de sección más grandes */
-    color: var(--secondary-color); /* Usa el azul oscuro para estos títulos */
-    margin-bottom: 60px; /* Más espacio debajo */
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.products-section h2::after, .about-us-section h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 80px; /* Línea decorativa debajo del título */
-    height: 4px;
-    background-color: var(--accent-color); /* Dorado */
-    border-radius: 2px;
-}
-
-
-/* Product Grid */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px; /* Más espacio entre productos */
-    justify-content: center;
-}
-
-.product-card {
-    background-color: #fff;
-    border-radius: 12px; /* Más redondeado */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* Sombra más prominente */
-    padding: 25px; /* Más padding */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Para que la imagen se vea bien con border-radius */
-}
-
-.product-card:hover {
-    transform: translateY(-10px) scale(1.02); /* Efecto más pronunciado */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-.product-card img {
-    max-width: 100%;
-    height: 220px; /* Altura fija para las imágenes de producto */
-    object-fit: cover; /* Asegura que la imagen cubra bien */
-    border-radius: 8px; /* Redondea las esquinas de la imagen */
-    margin-bottom: 20px;
-}
-
-.product-card h3 {
-    font-family: var(--font-body);
-    color: var(--secondary-color); /* Azul oscuro para los títulos de producto */
-    font-size: 1.6em; /* Más grande */
-    margin-bottom: 12px;
-}
-
-.product-card p {
-    font-size: 1.05em; /* Un poco más grande */
-    color: var(--text-color-dark);
-    margin-bottom: 25px;
-}
-
-.add-to-cart-btn {
-    background-color: var(--primary-color); /* Verde principal */
-    color: var(--text-color-light);
-    padding: 12px 25px; /* Más padding */
-    border: none;
-    border-radius: 30px; /* Más redondeado */
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.add-to-cart-btn:hover {
-    background-color: var(--accent-color); /* Al pasar el mouse, cambia a dorado */
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-
-/* About Us Section - Nuevo diseño */
-.about-us-section {
-    margin-top: 80px; /* Más margen superior */
-}
-
-.story-segment {
-    display: flex;
-    align-items: center;
-    gap: 60px; /* Más espacio entre texto e imagen */
-    margin-bottom: 80px; /* Más espacio entre segmentos */
-    background-color: #fff;
-    padding: 40px; /* Más padding */
-    border-radius: 15px; /* Más redondeado */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Sombra más prominente */
-    position: relative;
-    overflow: hidden; /* Asegura que los efectos no se salgan */
-}
-
-.story-segment::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.05); /* Ligero overlay para profundidad */
-    z-index: 0;
-}
-.story-segment:hover::before {
-    background-color: rgba(255,255,255,0.08); /* Más visible al hover */
-}
-
-
-.story-segment.segment-reverse {
-    flex-direction: row-reverse; /* Invierte el orden de imagen y texto */
-}
-
-.story-segment .segment-text, .story-segment .segment-image {
-    z-index: 1; /* Para que el contenido esté por encima del pseudo-elemento */
-}
-
-.story-segment .segment-text {
-    flex: 1;
-}
-
-.story-segment .segment-text h3 {
-    font-family: var(--font-heading);
-    color: var(--primary-color); /* Verde principal */
-    font-size: 2.8em; /* Títulos de subsección más grandes */
-    margin-top: 0;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.story-segment .segment-text p {
-    font-size: 1.2em; /* Texto un poco más grande */
-    line-height: 1.8;
-    color: var(--text-color-dark);
-}
-
-.story-segment .segment-text p span {
-    font-weight: bold;
-    color: var(--accent-color); /* Dorado vibrante para el llamado a la acción */
-}
-
-.story-segment .segment-image {
-    flex-shrink: 0;
-    width: 45%; /* Ancho de imagen ligeramente mayor */
-    max-width: 500px; /* Mayor ancho máximo */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra sutil para la imagen */
-}
-
-.story-segment .segment-image img {
-    width: 100%;
-    height: 350px; /* Altura fija para las imágenes del segmento */
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease; /* Efecto suave al pasar el mouse */
-}
-.story-segment .segment-image img:hover {
-    transform: scale(1.05); /* Zoom sutil al pasar el mouse */
-}
-
-
-/* Estilo para cajas destacadas */
-.highlight-box {
-    background-color: var(--background-light); /* Fondo más claro para destacar */
-    border-left: 6px solid var(--accent-color); /* Borde lateral más grueso */
-    padding-left: 35px; /* Más padding para el borde */
-}
-.highlight-box .segment-text h3 {
-    color: var(--secondary-color); /* Azul oscuro para los títulos destacados */
-}
-.highlight-box .segment-image {
-    border: 2px solid rgba(0,0,0,0.05); /* Borde sutil */
-    box-shadow: none; /* Quitamos sombra si ya tiene el segmento */
-}
-
-
-/* Procesos y Aprendizaje Section */
-.process-section {
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-
+.about-us-section h2, 
+.products-section h2, 
 .process-section h3 {
+    font-size: 3em;
     text-align: center;
-    font-family: var(--font-heading);
-    font-size: 2.8em;
-    color: var(--secondary-color);
     margin-bottom: 50px;
+    color: var(--secondary-brown);
     position: relative;
-    padding-bottom: 15px;
 }
+
+.about-us-section h2::after,
+.products-section h2::after,
 .process-section h3::after {
     content: '';
     position: absolute;
     left: 50%;
+    bottom: -10px;
     transform: translateX(-50%);
-    bottom: 0;
-    width: 70px; /* Línea decorativa */
-    height: 3px;
-    background-color: var(--primary-color); /* Verde */
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-yellow);
     border-radius: 2px;
 }
 
+/* =========================
+   STORY SEGMENTS
+========================= */
+.story-segment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 80px;
+    background: var(--light-bg);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.story-segment:hover {
+    transform: translateY(-8px);
+}
+
+.story-segment.segment-reverse {
+    flex-direction: row-reverse;
+}
+
+.segment-text {
+    flex: 1;
+}
+
+.segment-text h3 {
+    font-size: 2.5em;
+    color: var(--primary-green);
+}
+
+.segment-text p {
+    font-size: 1.15em;
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+.segment-image {
+    flex: 1;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+}
+
+.segment-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.segment-image img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   GRID DE PROCESOS
+========================= */
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Min-width ligeramente mayor */
-    gap: 40px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
 }
 
+/* =========================
+   TARJETA DE PROCESO
+========================= */
 .process-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    padding: 30px; /* Más padding */
+    background: var(--light-bg);
+    border-radius: 20px;
+    overflow: hidden;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.05); /* Borde muy sutil */
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+    position: relative;
 }
 
+/* =========================
+   EFECTO HOVER DINÁMICO
+========================= */
 .process-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
+/* =========================
+   IMAGEN DE PROCESO
+========================= */
 .process-card img {
-    max-width: 100%;
-    height: 200px; /* Altura fija para las imágenes de proceso */
+    width: 100%;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra para la imagen */
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
+.process-card img:hover {
+    transform: scale(1.1) rotate(-1deg);
+    filter: brightness(1.1);
+}
+
+/* =========================
+   TÍTULO Y TEXTO
+========================= */
 .process-card h4 {
-    font-family: var(--font-body);
-    color: var(--primary-color); /* Verde principal */
-    font-size: 1.8em; /* Título de tarjeta más grande */
-    margin-top: 0;
-    margin-bottom: 15px;
+    font-size: 1.9em;
+    color: var(--primary-green);
+    margin-bottom: 10px;
 }
 
 .process-card p {
-    font-size: 1.05em;
-    color: var(--text-color-dark);
-    line-height: 1.7;
+    font-size: 1.1em;
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-/* Estilos específicos para la sección de notas */
+/* =========================
+   OVERLAY OPCIONAL
+========================= */
+.process-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 193, 7, 0.1); /* Amarillo translúcido */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 20px;
+}
+
+.process-card:hover::before {
+    opacity: 1;
+}
+
+/* =========================
+   ANIMACIÓN DE ENTRADA
+========================= */
+.process-card.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.process-card.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+    .process-card img { height: 200px; }
+}
+
+@media (max-width: 768px) {
+    .process-card img { height: 160px; }
+}
+
+@media (max-width: 480px) {
+    .process-card img { height: 140px; }
+}
+
+/* =========================
+   PRODUCT CARDS
+========================= */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background: var(--light-bg);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--accent-yellow);
+    color: var(--secondary-brown);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* =========================
+   NOTES / HIGHLIGHT
+========================= */
 .notes-section {
-    background-color: var(--background-dark); /* Fondo oscuro para resaltar */
-    color: var(--text-color-light); /* Texto claro en fondo oscuro */
-    padding: 50px; /* Más padding */
-    border-left: none; /* Quitamos el borde izquierdo que hereda de highlight-box */
-    border-radius: 15px; /* Mismo redondeo que otros segmentos */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra fuerte */
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
-.notes-section .segment-text h3 {
-    color: var(--accent-color); /* Dorado para el título en sección oscura */
-}
-.notes-section .segment-text p, .notes-section ul li {
-    color: var(--text-color-light);
-}
-.notes-section ul li strong {
-    color: var(--accent-color); /* Dorado para el texto fuerte */
+
+.notes-section h3 {
+    color: var(--accent-yellow);
+    margin-bottom: 20px;
 }
 
 .notes-section ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.notes-section ul li {
-    margin-bottom: 18px; /* Más espacio entre ítems de lista */
-    font-size: 1.15em; /* Ligeramente más grande */
-    line-height: 1.7;
+.notes-section li {
     position: relative;
-    padding-left: 40px; /* Más espacio para el icono personalizado */
-    text-align: left;
+    padding-left: 40px;
+    margin-bottom: 15px;
+    font-size: 1.15em;
 }
 
-.notes-section ul li::before {
+.notes-section li::before {
     content: '☕';
-    font-size: 1.5em; /* Icono más grande */
-    color: var(--accent-color); /* Icono dorado */
     position: absolute;
     left: 0;
-    top: -2px; /* Ajusta la posición vertical del icono */
-    transform: rotate(15deg); /* Pequeña rotación para darle dinamismo */
+    top: -2px;
+    font-size: 1.4em;
+    color: var(--accent-yellow);
+    animation: blink 2s infinite;
 }
 
-/* Footer */
-/* Footer */
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.5; }
+}
+
+/* =========================
+   FOOTER MODERNO
+========================= */
 .main-footer {
-    background-color: var(--background-dark);
-    color: var(--text-color-light);
-    padding: 25px 5%; /* Más compacto */
-    text-align: left;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding: 60px 5%;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.3);
-    font-family: var(--font-body);
+}
+
+.main-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-brown));
+    opacity: 0.05;
+    pointer-events: none;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
+    align-items: start;
 }
 
 .footer-column h4 {
-    font-size: 1.4em;
-    margin-bottom: 15px;
-    color: var(--accent-color);
+    color: var(--accent-yellow);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    position: relative;
 }
 
-.footer-column p {
-    margin: 8px 0;
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-green);
+    border-radius: 2px;
+}
+
+.footer-column p, 
+.footer-column a {
+    color: var(--text-light);
     font-size: 1.1em;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    transition: color 0.3s ease;
 }
 
-.footer-column p a {
-    color: var(--text-color-light);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.footer-column p a:hover {
-    color: var(--accent-color);
+.footer-column a:hover {
+    color: var(--accent-yellow);
 }
 
 .qr-footer {
-    width: 100px;
-    margin-top: 10px;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
 }
 
-.tueste-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0;
+.qr-footer:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
-.tueste-info li {
-    margin-bottom: 8px;
-}
-
-.tueste-info label {
-    font-size: 1em;
-    cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-.tueste-info label:hover {
-    color: var(--accent-color);
-}
-
-.decorative-elements {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.sloth-macaw {
-    max-width: 250px;
-    object-fit: contain;
-    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
-}
-
-.copyright {
+.footer-bottom {
+    margin-top: 40px;
     text-align: center;
     font-size: 0.95em;
-    margin-top: 25px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-}
-.tueste-btn, .size-btn {
-  background-color: var(--primary-color);
-  color: var(--text-color-light);
-  border: none;
-  border-radius: 20px;
-  padding: 8px 16px;
-  margin: 5px 5px 0 0;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    color: rgba(253, 245, 230, 0.7);
 }
 
-.tueste-btn:hover, .size-btn:hover {
-  background-color: var(--accent-color);
-  color: var(--secondary-color);
-  transform: scale(1.05);
-}
-/* === ANIMACIONES GENERALES === */
-
-/* Fade-in al cargar elementos */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-}
-
-/* Bounce sutil para botones */
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-.add-to-cart-btn:hover {
-  animation: bounce 0.4s;
-}
-
-/* Zoom suave para imágenes de productos */
-.product-card img {
-  transition: transform 0.5s ease, filter 0.3s ease;
-}
-
-.product-card img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-/* Zoom suave para imágenes de story-segment y process-card */
-.story-segment .segment-image img,
-.process-card img {
-  transition: transform 0.5s ease;
-}
-
-.story-segment .segment-image img:hover,
-.process-card img:hover {
-  transform: scale(1.05);
-}
-
-/* Animación de botones de tueste y tamaño */
-.tueste-btn, .size-btn {
-  transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.tueste-btn:hover, .size-btn:hover {
-  transform: scale(1.1) rotate(-1deg); /* pequeño giro divertido */
-}
-
-/* Aparecer al hacer scroll (ScrollReveal simple) */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
-}
-
-.scroll-reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Animación suave para el hero title y subtitle */
-.hero-title {
-  animation: fadeIn 1.2s ease forwards;
-}
-
-.hero-subtitle {
-  animation: fadeIn 1.5s ease forwards;
-  animation-delay: 0.3s;
-}
-
-/* Animación de parpadeo suave para iconos dorados (ej. ☕) */
-@keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0.5; }
-}
-
-.notes-section ul li::before {
-  animation: blink 2s infinite;
-}
-
-/* Botón modo oscuro */
-.dark-mode-btn {
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.dark-mode-btn:hover {
-  transform: scale(1.15) rotate(-5deg);
-}
-
-/* Responsivo */
+/* =========================
+   RESPONSIVE FOOTER
+========================= */
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 25px;
     }
-    .contact-info p, .tueste-info label {
-        font-size: 1em;
-    }
-    .sloth-macaw {
-        max-width: 200px;
-        margin: 0 auto;
-        filter: none;
-    }
     .qr-footer {
-        width: 90px;
+        margin: 0 auto;
     }
 }
 
-/* --- RESPONSIVE DESIGN --- */
-
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 992px) {
     .story-segment {
         flex-direction: column;
-        gap: 30px;
-        padding: 30px;
-        margin-bottom: 60px;
     }
     .story-segment.segment-reverse {
         flex-direction: column;
     }
-    .story-segment .segment-image {
-        width: 70%;
-        max-width: 450px;
-    }
-    .story-segment .segment-image img {
+    .segment-image img {
         height: 300px;
-    }
-    .story-segment .segment-text h3 {
-        font-size: 2.2em;
-    }
-    .story-segment .segment-text p {
-        font-size: 1.1em;
-    }
-    .process-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-    }
-    .notes-section {
-        padding: 40px;
-    }
-    .notes-section ul li {
-        font-size: 1.05em;
-        padding-left: 35px;
-    }
-    .notes-section ul li::before {
-        font-size: 1.4em;
-    }
-    .footer-content {
-        gap: 30px;
-    }
-    .sloth-macaw {
-        bottom: -20px;
-        right: -10px;
-        max-width: 300px;
     }
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 5%;
-    }
-    .navbar .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    .search-bar {
-        width: 100%;
-        justify-content: center;
-    }
     .hero-banner {
         height: 350px;
     }
-    .hero-title {
-        font-size: 3.5em;
-    }
-    .hero-subtitle {
-        font-size: 1.4em;
-    }
-    .products-section h2, .about-us-section h2, .process-section h3 {
-        font-size: 2.5em;
-        margin-bottom: 40px;
-    }
-    .main-content {
-        padding: 40px 3%;
-    }
-    .product-card {
-        padding: 20px;
-    }
-    .product-card img {
-        height: 180px;
-    }
-    .story-segment .segment-image {
-        width: 90%;
-        max-width: 400px;
-    }
-    .story-segment .segment-image img {
-        height: 250px;
-    }
-    .story-segment .segment-text h3 {
-        font-size: 2em;
-    }
-    .story-segment .segment-text p {
-        font-size: 1em;
-    }
-    .process-card img {
-        height: 160px;
-    }
-    .process-card h4 {
-        font-size: 1.6em;
-    }
-    .notes-section {
-        padding: 30px;
-    }
-    .notes-section ul li {
-        font-size: 1em;
-        padding-left: 30px;
-    }
-    .notes-section ul li::before {
-        font-size: 1.3em;
-    }
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .contact-info {
-        text-align: center;
-    }
-    .tueste-options label {
-        display: inline-block;
-        margin: 0 10px 10px 0;
-    }
-    .decorative-elements {
-        order: -1; /* Mueve el perezoso/lapa arriba en móvil */
-        margin-bottom: 20px;
-    }
-    .sloth-macaw {
-        position: static; /* Quita el posicionamiento absoluto */
-        max-width: 250px;
-        margin-bottom: 20px;
-        filter: none; /* Quita la sombra en móvil */
-    }
+    .hero-title { font-size: 3em; }
+    .hero-subtitle { font-size: 1.4em; }
+    .product-card img { height: 180px; }
+    .process-card img { height: 160px; }
+    .segment-image img { height: 250px; }
 }
-
-@media (max-width: 480px) {
-    .hero-banner {
-        height: 280px;
-    }
-    .hero-title {
-        font-size: 2.8em;
-        letter-spacing: 1px;
-    }
-    .hero-subtitle {
-        font-size: 1.1em;
-    }
-    .products-section h2, .about-us-section h2, .process-section h3 {
-        font-size: 2em;
-        margin-bottom: 30px;
-    }
-    .product-card {
-        padding: 15px;
-    }
-    .product-card img {
-        height: 150px;
-    }
-    .product-card h3 {
-        font-size: 1.4em;
-    }
-    .add-to-cart-btn {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
-    .story-segment {
-        padding: 20px;
-        margin-bottom: 40px;
-    }
-    .story-segment .segment-image img {
-        height: 200px;
-    }
-    .story-segment .segment-text h3 {
-        font-size: 1.6em;
-    }
-    .story-segment .segment-text p {
-        font-size: 0.9em;
-    }
-    .process-card img {
-        height: 120px;
-    }
-    .process-card h4 {
-        font-size: 1.4em;
-    }
-    .notes-section ul li {
-        font-size: 0.95em;
-        padding-left: 25px;
-    }
-    .notes-section ul li::before {
-        font-size: 1.2em;
-    }
-    .qr-footer {
-        width: 100px;
-        padding: 5px;
-    }
-    .contact-info p {
-        font-size: 1.1em;
-    }
-    .tueste-options label {
-        font-size: 0.95em;
-        margin-bottom: 5px;
-    }
-}
-/* === MODO OSCURO === */
+/* Modo oscuro */
 body.dark-mode {
-    background-color: var(--background-dark);
-    color: var(--text-color-light);
+    background-color: var(--dark-bg);
+    color: var(--text-light);
 }
 
 body.dark-mode .navbar {
-    background-color: var(--secondary-color);
-    color: var(--text-color-light);
+    background: linear-gradient(90deg, var(--secondary-brown), var(--primary-green));
 }
 
-body.dark-mode .navbar .nav-links a {
-    color: var(--text-color-light);
-}
-
-body.dark-mode .navbar .nav-links a:hover {
-    color: var(--accent-color);
-}
-
-body.dark-mode .search-bar input {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: var(--text-color-light);
-}
-
-body.dark-mode .search-bar button {
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-}
-
-body.dark-mode .hero-banner img {
-    filter: brightness(0.45) saturate(1.1);
-}
-
-body.dark-mode .main-content,
+body.dark-mode .process-card,
 body.dark-mode .product-card,
-body.dark-mode .story-segment,
-body.dark-mode .process-card {
-    background-color: rgba(255,255,255,0.05);
-    color: var(--text-color-light);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+body.dark-mode .story-segment {
+    background: #3E2723; /* Marrón oscuro */
+    color: var(--text-light);
 }
 
-body.dark-mode .product-card h3,
-body.dark-mode .story-segment .segment-text h3,
-body.dark-mode .process-card h4 {
-    color: var(--accent-color);
+body.dark-mode .process-card h4,
+body.dark-mode .product-card h4,
+body.dark-mode .segment-text h3 {
+    color: var(--accent-yellow);
 }
 
-body.dark-mode .product-card p,
-body.dark-mode .story-segment .segment-text p,
-body.dark-mode .process-card p {
-    color: var(--text-color-light);
+body.dark-mode a {
+    color: var(--accent-yellow);
 }
 
 body.dark-mode .add-to-cart-btn {
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
+    background-color: var(--accent-yellow);
+    color: var(--secondary-brown);
 }
 
 body.dark-mode .add-to-cart-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--text-color-light);
+    background-color: var(--primary-green);
+    color: var(--text-light);
 }
-
-body.dark-mode .about-us-section h2,
-body.dark-mode .products-section h2,
-body.dark-mode .process-section h3 {
-    color: var(--accent-color);
-}
-
 body.dark-mode .notes-section {
-    background-color: #1a0f0a;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    background-color: var(--light-bg);
+    color: var(--text-dark);
 }
-
-body.dark-mode .main-footer {
-    background-color: #1a0f0a;
-}
+/* =========================
+   BOTÓN MODO OSCURO
+========================= */
 .dark-mode-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--accent-color);
-    color: var(--secondary-color);
-    border: none;
-    border-radius: 50%;
+    position: fixed;      /* Fijo en la pantalla */
+    bottom: 30px;         /* Desde abajo */
+    right: 30px;          /* Desde la derecha */
     width: 50px;
     height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-green);
+    color: var(--text-light);
+    font-size: 1.5em;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1.4em;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
+
 .dark-mode-btn:hover {
-    background: var(--primary-color);
-    color: var(--text-color-light);
-    transform: scale(1.1);
-}
-.dark-mode-btn:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(75, 150, 100, 0.5);
+    transform: scale(1.15) rotate(15deg);
+    background: var(--accent-yellow);
+    color: var(--secondary-brown);
 }
