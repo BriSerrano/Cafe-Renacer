@@ -715,3 +715,49 @@ body.dark-mode .process-card a:hover,
 body.dark-mode .product-card a:hover {
     color: var(--primary-green);
 }
+.dark-mode-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-green);
+    color: var(--text-light);
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.dark-mode-btn:hover {
+    transform: scale(1.2) rotate(15deg);
+    background: var(--accent-yellow);
+    color: var(--secondary-brown);
+}
+
+/* Estado activado (modo oscuro) */
+body.dark-mode .dark-mode-btn {
+    background: var(--accent-yellow);
+    color: var(--secondary-brown);
+}
+
+body.dark-mode .dark-mode-btn:hover {
+    background: var(--primary-green);
+    color: var(--text-light);
+    transform: scale(1.2) rotate(-15deg);
+}
+
+/* Ícono animado */
+.dark-mode-btn i {
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-btn.active i {
+    transform: rotate(180deg);
+}
