@@ -647,30 +647,71 @@ body.dark-mode .notes-section {
     color: var(--text-dark);
 }
 /* =========================
-   BOTÓN MODO OSCURO
+   MODO OSCURO
 ========================= */
-.dark-mode-btn {
-    position: fixed;      /* Fijo en la pantalla */
-    bottom: 30px;         /* Desde abajo */
-    right: 30px;          /* Desde la derecha */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background: var(--primary-green);
+body.dark-mode {
+    background-color: var(--dark-bg);
     color: var(--text-light);
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1000;
 }
 
-.dark-mode-btn:hover {
-    transform: scale(1.15) rotate(15deg);
-    background: var(--accent-yellow);
+body.dark-mode .navbar {
+    background: linear-gradient(90deg, var(--secondary-brown), var(--primary-green));
+}
+
+body.dark-mode a {
+    color: var(--accent-yellow);
+}
+
+body.dark-mode .add-to-cart-btn {
+    background-color: var(--accent-yellow);
     color: var(--secondary-brown);
+}
+
+body.dark-mode .add-to-cart-btn:hover {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+}
+
+/* Cards y segmentos */
+body.dark-mode .process-card,
+body.dark-mode .product-card,
+body.dark-mode .story-segment {
+    background-color: #3E2723;  /* Marrón oscuro para contraste */
+    color: var(--text-light);
+}
+
+body.dark-mode .process-card h4,
+body.dark-mode .product-card h4,
+body.dark-mode .segment-text h3 {
+    color: var(--accent-yellow); /* Títulos visibles */
+}
+
+body.dark-mode .process-card p,
+body.dark-mode .product-card p,
+body.dark-mode .segment-text p {
+    color: var(--text-light); /* Texto legible */
+}
+
+body.dark-mode .segment-text a {
+    color: var(--accent-yellow);
+}
+
+body.dark-mode .segment-text a:hover {
+    color: var(--primary-green);
+}
+
+body.dark-mode .notes-section {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+}
+
+/* Ajustes específicos de enlaces dentro de cards */
+body.dark-mode .process-card a,
+body.dark-mode .product-card a {
+    color: var(--accent-yellow);
+}
+
+body.dark-mode .process-card a:hover,
+body.dark-mode .product-card a:hover {
+    color: var(--primary-green);
 }
