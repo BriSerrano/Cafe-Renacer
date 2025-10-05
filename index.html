@@ -97,6 +97,31 @@
 
 </section>
     <main class="main-content">
+        <section class="news-section">
+  <h2>✨ Novedades ✨</h2>
+  <div class="carousel-container">
+    <button class="carousel-btn prev">❮</button>
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="img/maui.jpeg" alt="Nueva variedad de café">
+        <h4>Día internacional del café</h4>
+        <p>Descubre nuestro café y consiente a tu paladar!!.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="img/licor.jpeg" alt="Promoción especial">
+        <h4>Promoción de Temporada</h4>
+        <p>Durante este mes, tendremos a la venta nuestro licor de café.Para obtenerlo debes avisarnos con anticipación</p>
+      </div>
+      <div class="carousel-item">
+        <img src="img/cf2.jpeg" alt="Procesos">
+        <h4>Procesos</h4>
+        <p>Te podemos mostrar personalmente nuestros procesos de cosecha, produccion, tostado y empaque</p>
+      </div>
+    </div>
+    <button class="carousel-btn next">❯</button>
+  </div>
+</section>
+
         <section class="products-section">
     <h2>Nuestros Productos</h2>
     <div class="product-grid">
@@ -140,6 +165,30 @@
             window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
         });
     });
+</script>
+<script>
+  const carousel = document.querySelector(".carousel");
+  const nextBtn = document.querySelector(".carousel-btn.next");
+  const prevBtn = document.querySelector(".carousel-btn.prev");
+  const items = document.querySelectorAll(".carousel-item");
+  let index = 0;
+
+  function showSlide(newIndex) {
+    if (newIndex < 0) {
+      index = items.length - 1;
+    } else if (newIndex >= items.length) {
+      index = 0;
+    } else {
+      index = newIndex;
+    }
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener("click", () => showSlide(index + 1));
+  prevBtn.addEventListener("click", () => showSlide(index - 1));
+
+  // Cambio automático cada 6 segundos
+  setInterval(() => showSlide(index + 1), 6000);
 </script>
 
 
