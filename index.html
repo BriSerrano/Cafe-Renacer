@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renacer ~ Café de Costa Rica</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/halloween.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
+  <div class="hero-video-container">
+  <video autoplay muted loop class="hero-video">
+    <source src="videos/halloween.mp4" type="video/mp4">
+    Tu navegador no soporta HTML5 video.
+  </video>
+</div>
+
+<!-- Botón de música -->
+<button id="music-btn"><i class="bi bi-music-note-beamed"></i></button>
+<!-- Control de volumen -->
+<input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.5">
+<!-- Audio de fondo -->
+<audio id="bg-music" loop>
+    <source src="musica/Michael Jackson - Thriller (Lyrics).mp3" type="audio/mpeg">
+    
+</audio>
+
+<script>
+    const musicBtn = document.getElementById('music-btn');
+    const bgMusic = document.getElementById('bg-music');
+
+    let isPlaying = false;
+
+    musicBtn.addEventListener('click', () => {
+        if (!isPlaying) {
+            bgMusic.play().catch(e => console.log("Reproducción automática bloqueada:", e));
+            isPlaying = true;
+            musicBtn.innerHTML = '<i class="bi bi-music-note"></i>'; // Icono activo
+        } else {
+            bgMusic.pause();
+            isPlaying = false;
+            musicBtn.innerHTML = '<i class="bi bi-music-note-beamed"></i>'; // Icono pausado
+        }
+    });
+    const volumeControl = document.getElementById('volume-control');
+
+// Inicializamos el volumen del audio
+bgMusic.volume = volumeControl.value;
+
+volumeControl.addEventListener('input', () => {
+    bgMusic.volume = volumeControl.value;
+});
+
+</script>
+
+
         <button id="toggle-dark" class="dark-mode-btn">🌙</button>
 
     <header class="main-header">
@@ -230,5 +276,6 @@
 
 
     <script src="js/script.js"></script>
+    
 </body>
 </html>
