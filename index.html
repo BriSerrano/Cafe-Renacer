@@ -4,28 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renacer ~ Café de Costa Rica</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icono -->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/navidad.css">
 </head>
+
 <body>
 
+<!-- ❄ Animación de nieve -->
+<div class="snow-container">
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+</div>
 
+<!-- Botón de música -->
+<button id="play-music" class="music-btn">🎄 Música Navideña</button>
+<audio id="navidad-audio" loop>
+    <source src="musica/navidad.mp3" type="audio/mpeg">
+</audio>
 
-
-        <button id="toggle-dark" class="dark-mode-btn">🌙</button>
-
-    <header class="main-header">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="img/logo_renacer.png" alt="Logo Renacer">
-            </div> 
-        </nav>
-        <div class="hero-banner">
-            <img src="img/banner.png" alt="Cafetal de Costa Rica">
+<!-- ---------------------- HEADER ------------------------- -->
+<header class="main-header">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo_renacer.png" alt="Logo Renacer">
         </div>
-    </header>
-    <section class="about-us-section">
+
+        <ul class="nav-links">
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#procesos">Procesos</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-banner">
+        <img src="img/banner.png" alt="Cafetal de Costa Rica">
+        <div class="hero-text">
+            <h1>Café Renacer</h1>
+            <p>Tradición, sabor y calidad desde nuestras montañas</p>
+        </div>
+    </div>
+</header>
+
+<!-- ---------------------- HISTORIA ------------------------- -->
+<section id="historia" class="about-us-section">
     <h2>Nuestra Historia</h2>
 
     <div class="story-segment highlight-box">
@@ -34,7 +63,7 @@
             <p>En el corazón de nuestras fincas, donde el sol acaricia las montañas de Costa Rica, nace "Cafechito", el pequeño grano que lo inició todo. Representa la esencia de nuestro legado familiar y el compromiso con cada taza que servimos.</p>
         </div>
         <div class="segment-image">
-            <img src="img/Cafe_chito.png" alt="Ilustración de Cafechito">
+            <img src="img/chito.png" alt="Ilustración de Cafechito">
         </div>
     </div>
 
@@ -44,196 +73,186 @@
         </div>
         <div class="segment-text">
             <h3>Café Renacer: Donde la Calidad Cobra Vida</h3>
-            <p>Nuestro nombre, "Renacer", simboliza la renovación y la promesa de un sabor excepcional. Cada grano de Café Renacer es cuidadosamente seleccionado, un testimonio de la pasión y el arduo trabajo de generaciones de caficultores.</p>
+            <p>Nuestro nombre simboliza la renovación y la promesa de un sabor excepcional. Cada grano es seleccionado cuidadosamente, reflejando la pasión y el trabajo de generaciones.</p>
         </div>
     </div>
 
     <div class="story-segment">
         <div class="segment-text">
-            <h3>Nuestra Trayectoria: Un Legado Cafetalero</h3>
-            <p>La historia de Renacer es una oda a la tradición cafetalera costarricense, donde cada grano es cultivado con pasión y respeto por la tierra. Desde las fértiles montañas del valle central, zona de los santos y el valle de Orosi, específicamente cachí, nuestra familia ha dedicado su corazón a perfeccionar el arte del café, transmitiendo conocimientos de generación en generación.</p>
-            <p>Más que una bebida, nuestro café es el reflejo de nuestra identidad, un puente entre el campo y tu taza, lleno de sabor, cultura y el espíritu vibrante de Costa Rica. <span>¡Descubre la experiencia Renacer!</span></p>
+            <h3>Nuestra Trayectoria</h3>
+            <p>La historia de Renacer es una oda a la tradición cafetalera costarricense, donde cada grano es cultivado con pasión y respeto por la tierra. Proveniente del Valle Central, Los Santos y Orosi —específicamente Cachí— nuestro legado familiar ha perfeccionado el arte del café.</p>
+            <p>Más que una bebida, nuestro café es identidad, cultura y sabor. <span>¡Descubre la experiencia Renacer!</span></p>
         </div>
         <div class="segment-image">
-            <img src="img/planta.jpeg" alt="Famila cafetalera">
+            <img src="img/planta.jpeg" alt="Familia cafetalera">
         </div>
     </div>
-
-    <div class="process-section">
-        <h3>Nuestros Procesos: Del Grano a Tu Taza</h3>
-        <div class="process-grid">
-            <div class="process-card">
-                <img src="img/cosecha.jpeg" alt="Cosecha de Café">
-                <h4>Cosecha Selectiva</h4>
-                <p>Recolectamos a mano solo las cerezas de café en su punto óptimo de madurez, garantizando la dulzura y la calidad de cada grano.</p>
-            </div>
-            <div class="process-card">
-                <img src="img/tostado.png" alt="Tueste de Café">
-                <h4>Tueste Artesanal</h4>
-                <p>Nuestro tueste es un arte. Controlamos meticulosamente la temperatura para realzar los perfiles de sabor únicos de nuestro café, desde tuestes medios hasta oscuros.</p>
-            </div>
-            <div class="process-card">
-                <img src="img/4.jpeg" alt="Empaque de Café">
-                <h4>Empaque Cuidadoso</h4>
-                <p>Empacamos nuestro café recién tostado en bolsas que preservan su frescura y aroma, asegurando que cada taza sea una experiencia memorable.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="story-segment highlight-box notes-section">
-        <div class="segment-text">
-            <h3>Notas Importantes: Compromiso y Sostenibilidad</h3>
-            <ul>
-                <li><strong>Sostenibilidad Ambiental:</strong> Implementamos prácticas agrícolas que protegen nuestros ecosistemas y la biodiversidad local.</li>
-                <li><strong>Comercio Justo:</strong> Valoramos el trabajo de nuestros caficultores, asegurando condiciones justas y un desarrollo sostenible para la comunidad.</li>
-                <li><strong>Calidad Excepcional:</strong> Realizamos constantes controles de calidad en cada etapa del proceso, desde la semilla hasta el empaque final.</li>
-            </ul>
-        </div>
-        <div class="segment-image">
-            <img src="img/flor.jpeg" alt="Hoja de cafeto con gotas de agua">
-        </div>
-    </div>
-
-</section>
-    <main class="main-content">
-        <section class="news-section">
-  <h2>✨ Novedades ✨</h2>
-  <div class="carousel-container">
-    <button class="carousel-btn prev">❮</button>
-    <div class="carousel">
-      <div class="carousel-item">
-        <img src="img/maui.jpeg" alt="Nueva variedad de café">
-        <h4>Día internacional del café</h4>
-        <p>Descubre nuestro café y consiente a tu paladar!!.</p>
-      </div>
-      <div class="carousel-item">
-        <img src="img/licor.jpeg" alt="Promoción especial">
-        <h4>Promoción de Temporada</h4>
-        <p>Durante este mes, tendremos a la venta nuestro licor de café.Para obtenerlo debes avisarnos con anticipación</p>
-      </div>
-      <div class="carousel-item">
-        <img src="img/cf2.jpeg" alt="Procesos">
-        <h4>Procesos</h4>
-        <p>Te podemos mostrar personalmente nuestros procesos de cosecha, produccion, tostado y empaque</p>
-      </div>
-    </div>
-    <button class="carousel-btn next">❯</button>
-  </div>
 </section>
 
-        <section class="products-section">
+<!-- ---------------------- PROCESOS ------------------------- -->
+<section id="procesos" class="process-section">
+    <h3>Nuestros Procesos: Del Grano a Tu Taza</h3>
+
+    <div class="process-grid">
+        <div class="process-card card">
+            <img src="img/cosecha.jpeg" alt="Cosecha de Café">
+            <h4>Cosecha Selectiva</h4>
+            <p>Recolectamos a mano solo las cerezas en su punto óptimo de madurez.</p>
+        </div>
+
+        <div class="process-card card">
+            <img src="img/tostado.png" alt="Tueste de Café">
+            <h4>Tueste Artesanal</h4>
+            <p>Control meticuloso de temperatura para realzar los sabores únicos.</p>
+        </div>
+
+        <div class="process-card card">
+            <img src="img/4.jpeg" alt="Empaque de Café">
+            <h4>Empaque Cuidadoso</h4>
+            <p>Preservamos la frescura y el aroma del café recién tostado.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------------- NOVEDADES ------------------------- -->
+<section class="news-section">
+    <h2>✨ Novedades ✨</h2>
+
+    <div class="carousel-container">
+        <button class="carousel-btn prev">❮</button>
+
+        <div class="carousel">
+            <div class="carousel-item card">
+                <img src="img/rompope.png" alt="Rompope artesanal">
+                <h4>Rompope artesanal</h4>
+                <p>Edición limitada para compartir en esta temporada navideña.</p>
+            </div>
+
+            <div class="carousel-item card">
+                <img src="img/licor.png" alt="Licor de café">
+                <h4>Promoción de Temporada</h4>
+                <p>Disfruta nuestro licor de café ideal para tus celebraciones.</p>
+            </div>
+
+            <div class="carousel-item card">
+                <img src="img/navideña2.png" alt="Ediciones navideñas">
+                <h4>¡¡¡Navidad a lo Chito!!!</h4>
+                <p>Ediciones especiales de temporada. ¡No te las pierdas!</p>
+            </div>
+        </div>
+
+        <button class="carousel-btn next">❯</button>
+    </div>
+</section>
+
+<!-- ---------------------- PRODUCTOS ------------------------- -->
+<section id="productos" class="products-section">
     <h2>Nuestros Productos</h2>
+
     <div class="product-grid">
-        <div class="product-card">
+        <div class="product-card card">
             <img src="img/cuarto.jpeg" alt="Café Renacer 250g">
             <h3>Café 250g</h3>
-            <p>Este café puedes adquirirlo en categoría alta que es RENACER o en el café familiar tradicional CAFECHITO</p>
+            <p>Disponible en RENACER o CAFECHITO.</p>
             <button class="add-to-cart-btn">Comprar Ahora</button>
         </div>
-        <div class="product-card">
+
+        <div class="product-card card">
             <img src="img/medio.jpeg" alt="Café Renacer 500g">
             <h3>Café 500g</h3>
-            <p>Este café puedes adquirirlo en categoría alta que es RENACER o en el café familiar tradicional CAFECHITO</p>
+            <p>Disponible en RENACER o CAFECHITO.</p>
             <button class="add-to-cart-btn">Comprar Ahora</button>
         </div>
-        <div class="product-card">
+
+        <div class="product-card card">
             <img src="img/kilo.jpeg" alt="Café Renacer 1kg">
             <h3>Café 1 Kg</h3>
-            <p>Este café puedes adquirirlo en categoría alta que es RENACER o en el café familiar tradicional CAFECHITO</p>
+            <p>Disponible en RENACER o CAFECHITO.</p>
             <button class="add-to-cart-btn">Comprar Ahora</button>
         </div>
     </div>
 </section>
 
-<script>
-    // Número de WhatsApp (incluye código de país, ejemplo Costa Rica: 506)
-    const whatsappNumber = "50660073737";
+<!-- ---------------------- FOOTER ------------------------- -->
+<footer id="contacto" class="main-footer">
+    <div class="footer-content">
 
-    // Seleccionamos todos los botones de "Comprar Ahora"
-    const buyButtons = document.querySelectorAll(".add-to-cart-btn");
+        <div class="footer-column">
+            <h4>Contáctanos</h4>
+            <p>📞 <a href="https://wa.me/50660073737" target="_blank">6007-3737</a></p>
+            <p>📍 Costa Rica</p>
+            <img src="img/Café_Renacer-1024.jpeg" alt="Código QR" class="qr-footer">
+        </div>
 
-    buyButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            // Obtenemos el nombre del producto desde el título <h3>
-            const productName = button.closest(".product-card").querySelector("h3").innerText;
-            // Construimos el mensaje para WhatsApp
-            const message = `Hola! Quiero comprar el ${productName}`;
-            // Codificamos el mensaje para URL
-            const encodedMessage = encodeURIComponent(message);
-            // Abrimos WhatsApp en una nueva pestaña
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
-        });
-    });
-</script>
-<script>
-  const carousel = document.querySelector(".carousel");
-  const nextBtn = document.querySelector(".carousel-btn.next");
-  const prevBtn = document.querySelector(".carousel-btn.prev");
-  const items = document.querySelectorAll(".carousel-item");
-  let index = 0;
+        <div class="footer-column">
+            <h4>Opciones de Tueste</h4>
+            <div class="tueste-buttons">
+                <button class="tueste-btn" data-tueste="media">Tueste Medio</button>
+                <button class="tueste-btn" data-tueste="oscura">Tueste Oscuro</button>
+            </div>
 
-  function showSlide(newIndex) {
-    if (newIndex < 0) {
-      index = items.length - 1;
-    } else if (newIndex >= items.length) {
-      index = 0;
-    } else {
-      index = newIndex;
-    }
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-  }
+            <div class="size-buttons" style="margin-top:10px;">
+                <button class="size-btn" data-size="250g">250g</button>
+                <button class="size-btn" data-size="500g">500g</button>
+                <button class="size-btn" data-size="1kg">1kg</button>
+            </div>
+        </div>
 
-  nextBtn.addEventListener("click", () => showSlide(index + 1));
-  prevBtn.addEventListener("click", () => showSlide(index - 1));
+        <div class="footer-column decorative-elements">
+            <img src="img/lapa.png" alt="Perezoso y Lapa" class="sloth-macaw">
+        </div>
 
-  // Cambio automático cada 6 segundos
-  setInterval(() => showSlide(index + 1), 6000);
-</script>
-
-
-        
-    </main>
-
-<footer class="main-footer">
-  <div class="footer-content">
-
-    <!-- Columna 1: Información de contacto -->
-    <div class="footer-column contact-info">
-      <h4>Contáctanos</h4>
-      <p>📞 <a href="https://wa.me/50660073737" target="_blank" rel="noopener">6007-3737</a></p>
-      <p>📍 Costa Rica</p>
-      <img src="img/Café_Renacer-1024.jpeg" alt="Código QR" class="qr-footer">
     </div>
 
-    <!-- Columna 2: Opciones de tueste -->
-    <div class="footer-column tueste-info">
-      <h4>Opciones de tueste</h4>
-      <div class="tueste-buttons">
-        <button class="tueste-btn" data-tueste="media">Tueste Medio</button>
-        <button class="tueste-btn" data-tueste="oscura">Tueste Oscuro</button>
-      </div>
-      <div class="size-buttons" style="margin-top:10px;">
-        <button class="size-btn" data-size="250g">250g</button>
-        <button class="size-btn" data-size="500g">500g</button>
-        <button class="size-btn" data-size="1kg">1kg</button>
-      </div>
-    </div>
-
-    <!-- Columna 3: Elemento decorativo -->
-    <div class="footer-column decorative-elements">
-      <img src="img/lapa.png" alt="Perezoso y Lapa" class="sloth-macaw">
-    </div>
-
-  </div>
-
-  <p class="copyright">
-    &copy; 2023 Renacer Café de Costa Rica. Todos los derechos reservados.
-  </p>
+    <p class="copyright">
+        &copy; 2023 Renacer Café de Costa Rica. Todos los derechos reservados.
+    </p>
 </footer>
 
+<!-- ---------------------- SCRIPTS ------------------------- -->
+<script>
+const music = document.getElementById("navidad-audio");
+const playBtn = document.getElementById("play-music");
 
+playBtn.addEventListener("click", () => {
+    if (music.paused) {
+        music.play();
+        playBtn.textContent = "⏸ Pausar Música";
+    } else {
+        music.pause();
+        playBtn.textContent = "🎄 Música Navideña";
+    }
+});
+</script>
 
-    <script src="js/script.js"></script>
-    
+<script>
+const whatsappNumber = "50660073737";
+
+document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        const productName = button.closest(".product-card").querySelector("h3").innerText;
+        const encoded = encodeURIComponent(`Hola! Quiero comprar el ${productName}`);
+        window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, "_blank");
+    });
+});
+</script>
+
+<script>
+const carousel = document.querySelector(".carousel");
+const items = document.querySelectorAll(".carousel-item");
+let index = 0;
+
+document.querySelector(".next").onclick = () => changeSlide(1);
+document.querySelector(".prev").onclick = () => changeSlide(-1);
+
+function changeSlide(direction) {
+    index = (index + direction + items.length) % items.length;
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+}
+
+setInterval(() => changeSlide(1), 15000);
+</script>
+<div class="mensaje-navidad"></div>
+
 </body>
 </html>

@@ -1,0 +1,1787 @@
+/* =========================
+   FUENTES
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Parisienne&display=swap');
+
+/* =========================
+   PALETA NAVIDEÑA PASTEL PREMIUM
+========================= */
+:root {
+    --pink-pastel: #F7DDE2; 
+    --rose-quartz: #E8C9D9;         
+    --mint-pastel: #D8F3E2;         
+    --mint-deep: #A3D5C1;          
+    --gold-soft: #F7E9B4;          
+    --white-snow: #fd9a04;         
+    --taupe-text: #fa0000;        
+
+    --shadow-soft: rgba(0, 0, 0, 0.08);
+    --shadow-mid: rgba(0, 0, 0, 0.18);
+
+    --font-heading: 'Parisienne', cursive;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* =========================
+    BODY — ESTÉTICA PASTEL
+========================= */
+
+body {
+  font-family: var(--font-body);
+  color: var(--taupe-text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  overflow-x: hidden;
+
+ background: linear-gradient(135deg, #a00404, #8f0909);
+
+/* ❄ Copos de nieve */
+background-image:
+  radial-gradient(rgb(42, 138, 18) 1px, transparent 1px),
+  radial-gradient(rgba(74, 228, 27, 0.411) 1.5px, transparent 1.5px),
+  radial-gradient(rgb(223, 0, 0) 1px, transparent 1px),
+  radial-gradient(rgb(231, 3, 3) 1.5px, transparent 1.5px);
+
+  background-size: 70px 70px, 100px 100px, 60px 60px, 90px 90px;
+  background-position: 0 0, 30px 40px, 50px 10px, 20px 60px;
+
+.main-footer {
+    margin-top: 80px;
+    padding-top: 50px;
+}
+
+/* ✨ Capa suave de textura */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* =========================
+   ❄️ COPOS PREMIUM
+========================= */
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: var(--gold-soft);
+  font-size: 1.3rem;
+  opacity: 0.85;
+  animation: snowflakes linear infinite;
+  pointer-events: none;
+}
+
+@keyframes snowflakes {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Variaciones */
+.snowflake:nth-child(1) { left: 10%; animation-duration: 10s; }
+.snowflake:nth-child(2) { left: 30%; animation-duration: 12s; }
+.snowflake:nth-child(3) { left: 50%; animation-duration: 9s;  }
+.snowflake:nth-child(4) { left: 70%; animation-duration: 11s; }
+.snowflake:nth-child(5) { left: 90%; animation-duration: 13s; }
+
+/* =========================
+    NAVBAR PASTEL ELEGANTE
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 5%;
+    background: linear-gradient(90deg, var(--pink-pastel), var(--mint-pastel), var(--gold-soft));
+    background-size: 200% 200%;
+    animation: pastel-move 10s ease infinite;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    box-shadow: 0 4px 20px var(--shadow-soft);
+}
+
+@keyframes pastel-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.navbar .nav-links a {
+  color: #6A6663;
+  font-weight: 600;
+  font-size: 1.1em;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: var(--mint-deep);
+  transform: scale(1.08);
+}
+
+/* =========================
+   HERO PASTEL
+========================= */
+
+.hero-banner {
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255,255,255,0.4);
+  box-shadow: 0 5px 40px var(--shadow-mid);
+}
+
+.hero-banner img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8) saturate(1.1);
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 4em;
+  color: var(--rose-quartz);
+  text-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
+
+.hero-subtitle {
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: var(--mint-deep);
+}
+
+/* =========================
+   🎁 CARDS PASTELES DELICADAS
+========================= */
+
+.story-segment {
+  background: var(--white-snow);
+  border-radius: 25px;
+  padding: 45px;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  border: 2px solid var(--gold-soft);
+  box-shadow: 0 8px 30px var(--shadow-soft);
+  transition: 0.3s ease;
+}
+
+.story-segment:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px var(--shadow-mid);
+}
+
+.story-segment::before {
+  content: "❄️ ✨";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  opacity: 0.4;
+  font-size: 1.3em;
+}
+
+/* =========================
+   TÍTULOS PREMIUM
+========================= */
+
+h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--rose-quartz);
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 35px;
+}
+/* =========================
+   FUENTES
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Parisienne&display=swap');
+
+/* =========================
+   BODY — ESTÉTICA PASTEL
+========================= */
+
+body {
+  font-family: var(--font-body);
+  color: var(--taupe-text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  overflow-x: hidden;
+
+  background:
+    linear-gradient(135deg, rgba(248, 224, 231, 0.7), rgba(214, 238, 224, 0.7)),
+    url("https://i.ibb.co/Y0fQgRz/pastel-christmas-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+
+/* ✨ Capa suave de textura */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/snow.png');
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* =========================
+   ❄️ COPOS PREMIUM
+========================= */
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: var(--gold-soft);
+  font-size: 1.3rem;
+  opacity: 0.85;
+  animation: snowflakes linear infinite;
+  pointer-events: none;
+}
+
+@keyframes snowflakes {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Variaciones */
+.snowflake:nth-child(1) { left: 10%; animation-duration: 10s; }
+.snowflake:nth-child(2) { left: 30%; animation-duration: 12s; }
+.snowflake:nth-child(3) { left: 50%; animation-duration: 9s;  }
+.snowflake:nth-child(4) { left: 70%; animation-duration: 11s; }
+.snowflake:nth-child(5) { left: 90%; animation-duration: 13s; }
+
+/* =========================
+    NAVBAR PASTEL ELEGANTE
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 5%;
+    background: linear-gradient(90deg, var(--pink-pastel), var(--mint-pastel), var(--gold-soft));
+    background-size: 200% 200%;
+    animation: pastel-move 10s ease infinite;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    box-shadow: 0 4px 20px var(--shadow-soft);
+}
+
+@keyframes pastel-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.navbar .nav-links a {
+  color: #6A6663;
+  font-weight: 600;
+  font-size: 1.1em;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: var(--mint-deep);
+  transform: scale(1.08);
+}
+
+/* =========================
+    HERO PASTEL
+========================= */
+
+.hero-banner {
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255,255,255,0.4);
+  box-shadow: 0 5px 40px var(--shadow-mid);
+}
+
+.hero-banner img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8) saturate(1.1);
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 4em;
+  color: var(--rose-quartz);
+  text-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
+
+.hero-subtitle {
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: var(--mint-deep);
+}
+
+/* =========================
+    CARDS PASTELES DELICADAS
+========================= */
+
+.story-segment {
+  background: var(--white-snow);
+  border-radius: 25px;
+  padding: 45px;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  border: 2px solid var(--gold-soft);
+  box-shadow: 0 8px 30px var(--shadow-soft);
+  transition: 0.3s ease;
+}
+
+.story-segment:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px var(--shadow-mid);
+}
+
+.story-segment::before {
+  content: "❄️ ✨";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  opacity: 0.4;
+  font-size: 1.3em;
+}
+
+/* =========================
+   TÍTULOS PREMIUM
+========================= */
+
+h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--rose-quartz);
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* ❄️ Contenedor general de copos */
+.snowflake {
+  position: fixed;
+  top: -10%;
+  color: white;
+  font-size: 1.5em;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999;
+  animation-name: fall, drift;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+}
+
+/* 🌨️ Animación de caída */
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0.8;
+  }
+}
+
+/* 🌬️ Animación de deriva lateral */
+@keyframes drift {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(40px);
+  }
+}
+
+/* ✨ Variaciones para cada copo */
+.snowflake:nth-child(1) {
+  left: 10%;
+  font-size: 2rem;
+  animation-duration: 12s, 4s;
+  animation-delay: 0s, 1s;
+}
+
+.snowflake:nth-child(2) {
+  left: 25%;
+  font-size: 1.4rem;
+  animation-duration: 14s, 5s;
+  animation-delay: 2s, 0s;
+}
+
+.snowflake:nth-child(3) {
+  left: 45%;
+  font-size: 1.8rem;
+  animation-duration: 10s, 6s;
+  animation-delay: 1s, 2s;
+}
+
+.snowflake:nth-child(4) {
+  left: 65%;
+  font-size: 1.6rem;
+  animation-duration: 15s, 5s;
+  animation-delay: 3s, 1s;
+}
+
+.snowflake:nth-child(5) {
+  left: 80%;
+  font-size: 1.2rem;
+  animation-duration: 18s, 6s;
+  animation-delay: 4s, 2s;
+}
+
+/* 🌟 Animación de luz suave */
+@keyframes festive-glow {
+  0% { opacity: 0.7; filter: brightness(1); }
+  50% { opacity: 1; filter: brightness(1.25); }
+  100% { opacity: 0.8; filter: brightness(1); }
+}
+
+/* 🌟 Efecto luces doradas intermitentes */
+@keyframes glow-lights {
+  0%, 100% {
+    opacity: 0.7;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.3);
+  }
+}
+
+/* ❄️ Copos de nieve animados */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: #fff;
+  font-size: 1.1em;
+  opacity: 0.9;
+  animation: snowflakes linear infinite;
+  pointer-events: none;
+  z-index: 2000;
+}
+
+@keyframes snowflakes {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Variaciones de caída */
+.snowflake:nth-child(1) { left: 10%; animation-duration: 9s; }
+.snowflake:nth-child(2) { left: 25%; animation-duration: 11s; }
+.snowflake:nth-child(3) { left: 45%; animation-duration: 8s; }
+.snowflake:nth-child(4) { left: 65%; animation-duration: 10s; }
+.snowflake:nth-child(5) { left: 80%; animation-duration: 12s; }
+
+/* 🌟 Efecto de nieve cayendo (si quieres más vida) */
+@keyframes snowflakes {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: #fff;
+  font-size: 1.2em;
+  opacity: 0.9;
+  animation: snowflakes linear infinite;
+  pointer-events: none;
+  z-index: 2000;
+}
+
+.snowflake:nth-child(1) { left: 10%; animation-duration: 8s; }
+.snowflake:nth-child(2) { left: 30%; animation-duration: 11s; }
+.snowflake:nth-child(3) { left: 50%; animation-duration: 9s; }
+.snowflake:nth-child(4) { left: 70%; animation-duration: 10s; }
+.snowflake:nth-child(5) { left: 90%; animation-duration: 12s; }
+
+/* ✨ Movimiento sutil del fondo */
+@keyframes shimmer-bg {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Asegura márgenes y padding proporcionados */
+.main-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(30px, 5vw, 60px);
+}
+@media (max-width: 992px) {
+  .story-segment {
+    flex-direction: column !important;
+    padding: 25px;
+    gap: 25px;
+  }
+
+  .segment-text h3 {
+    font-size: 2em;
+  }
+
+  .segment-text p {
+    font-size: 1em;
+  }
+
+  .segment-image img {
+    height: auto;
+    max-height: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .process-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .process-card,
+  .product-card {
+    padding: 20px;
+  }
+
+  .process-card img,
+  .product-card img {
+    height: auto;
+    max-height: 180px;
+  }
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    margin: 0 0 15px;
+}
+.main-content {
+  position: relative;
+}
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 221, 150, 0.3), transparent 70%);
+  filter: blur(60px);
+  z-index: -1;
+}
+
+body.dark-mode .main-content::before {
+  background: radial-gradient(circle, rgba(255, 200, 100, 0.15), transparent 80%);
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-brown);
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+/* =========================
+    HEADER Y NAVBAR — MODO NAVIDEÑO
+========================= */
+.main-header {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🎁 Fondo con gradiente animado navideño */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: linear-gradient(90deg, #2E7D32, #C62828, #FFD700, #2E7D32);
+  background-size: 300% 300%;
+  animation: holiday-glow 8s ease-in-out infinite;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border-bottom: 3px solid rgba(255, 215, 0, 0.4);
+  position: relative;
+}
+
+/* ✨ Luces animadas en la parte superior del navbar */
+.navbar::before {
+  
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  color: #FFD700;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+  animation: twinkle 2.5s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes holiday-glow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.navbar .logo img {
+  height: 75px;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+  transition: transform 0.3s ease;
+}
+
+.navbar .logo img:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+/* 🔔 Links con brillo */
+.navbar .nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar .nav-links a {
+  color: #FFF8E1;
+  font-weight: 700;
+  font-size: 1.15em;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+}
+
+.navbar .nav-links a::after {
+  content: "🎄";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar .nav-links a:hover::after {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* =========================
+   🎆 HERO BANNER NAVIDEÑO
+========================= */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-light);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3));
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
+}
+
+/* 🎄 Fondo del hero (imagen + filtro festivo) */
+.hero-banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.75) saturate(1.2);
+  transition: transform 0.8s ease;
+}
+
+.hero-banner:hover img {
+  transform: scale(1.06);
+}
+
+/* ❄️ Capa de nieve animada */
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/snow.png');
+  opacity: 0.15;
+  z-index: -1;
+  animation: snow-fall 10s linear infinite;
+}
+
+@keyframes snow-fall {
+  from { background-position: 0 0; }
+  to { background-position: 0 100%; }
+}
+
+/* ✨ Texto principal */
+.hero-title {
+  font-size: 3.8em;
+  font-weight: 800;
+  color: #FFF8E1;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.7),
+               0 0 40px rgba(198, 40, 40, 0.4);
+  margin: 0 20px;
+  animation: glow-text 3s ease-in-out infinite alternate;
+}
+
+.hero-subtitle {
+  font-size: 1.6em;
+  margin-top: 15px;
+  color: #FFE082;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  margin: 0 20px;
+  animation: fadein 2s ease-in forwards;
+}
+
+@keyframes glow-text {
+  0% { text-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+  100% { text-shadow: 0 0 30px rgba(255, 0, 0, 0.7); }
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 1024px) {
+    .hero-banner {
+        height: 400px;
+    }
+    .hero-title {
+        font-size: 2.8em;
+    }
+    .hero-subtitle {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 350px;
+        border-radius: 10px;
+    }
+    .hero-title {
+        font-size: 2.2em;
+    }
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        height: 300px;
+    }
+    .hero-title {
+        font-size: 1.8em;
+    }
+    .hero-subtitle {
+        font-size: 1em;
+    }
+}
+
+/* =========================
+   HERO BANNER RESPONSIVE
+========================= */
+@media (max-width: 1200px) {
+    .hero-banner {
+        height: 450px;
+    }
+    .hero-title { font-size: 3.5em; }
+    .hero-subtitle { font-size: 1.6em; }
+}
+
+@media (max-width: 992px) {
+    .hero-banner {
+        height: 400px;
+    }
+    .hero-title { font-size: 3em; }
+    .hero-subtitle { font-size: 1.4em; }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 350px;
+    }
+    .hero-title { font-size: 2.5em; }
+    .hero-subtitle { font-size: 1.2em; }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        height: 300px;
+        padding: 0 10px;
+    }
+    .hero-title { font-size: 2em; }
+    .hero-subtitle { font-size: 1em; }
+}
+
+/* =========================
+   🎅 SECCIONES PRINCIPALES NAVIDEÑAS
+========================= */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 5%;
+  position: relative;
+}
+
+/* ✨ Títulos festivos con brillo dorado */
+.about-us-section h2, 
+.products-section h2, 
+.process-section h3 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #C62828; /* rojo navideño */
+  position: relative;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
+               0 0 20px rgba(198, 40, 40, 0.4);
+  animation: festive-glow 3s ease-in-out infinite alternate;
+}
+
+.about-us-section h2::after,
+.products-section h2::after,
+.process-section h3::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD700, #C62828, #2E7D32, #FFD700);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  animation: shimmer-line 4s linear infinite;
+}
+
+@keyframes shimmer-line {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes festive-glow {
+  0% { text-shadow: 0 0 10px rgba(255,215,0,0.3); }
+  100% { text-shadow: 0 0 25px rgba(255,0,0,0.6); }
+}
+
+/* =========================
+   🎁 STORY SEGMENTS NAVIDEÑOS
+========================= */
+.story-segment {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 80px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  padding: 50px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15),
+              0 0 25px rgba(255, 215, 0, 0.3);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-segment:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2),
+              0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+/* ❄️ Efecto de copos de nieve flotando sobre cada card */
+.story-segment::before {
+  content: "❅ ❄️ ✨ ❆";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  animation: float-snow 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float-snow {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(10px) rotate(10deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(-10deg); opacity: 0.8; }
+}
+
+/* 🕯️ Alternar dirección */
+.story-segment.segment-reverse {
+  flex-direction: row-reverse;
+}
+
+/* 🎄 Texto */
+.segment-text {
+  flex: 1;
+}
+
+.segment-text h3 {
+  font-size: 2.5em;
+  color: #2E7D32;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.segment-text p {
+  font-size: 1.15em;
+  color: #4E342E;
+  line-height: 1.8;
+}
+
+/* 🎁 Imagen */
+.segment-image {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  border: 3px solid rgba(255, 215, 0, 0.4);
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+}
+
+.segment-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.segment-image:hover img {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+}
+
+/* =========================
+   🎄 GRID DE PROCESOS — MODO NAVIDEÑO ELEGANTE
+========================= */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  padding: 60px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* 🧊 Tarjeta individual de proceso */
+.process-card {
+  background: linear-gradient(180deg, #FFF8E1, #FAFAFA);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  border: 2px solid #FFD700; /* borde dorado */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15),
+              0 0 15px rgba(255, 215, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ✨ Reflejo de brillo diagonal */
+.process-card::before {
+  content: '';
+  position: absolute;
+  top: -120%;
+  left: -50%;
+  width: 200%;
+  height: 300%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.process-card:hover::before {
+  opacity: 1;
+  animation: shimmer-process 2s ease-in-out infinite;
+}
+
+/* 🎁 Encabezado del proceso */
+.process-card h3 {
+  color: #2E7D32;
+  font-weight: 700;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+/* 📜 Descripción */
+.process-card p {
+  color: #333;
+  font-size: 1.05em;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* 🌲 Icono del proceso (opcional) */
+.process-card .process-icon {
+  font-size: 2.5em;
+  color: #C62828;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.process-card:hover .process-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* 💫 Efecto hover */
+.process-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4),
+              0 0 25px rgba(198, 40, 40, 0.25);
+}
+
+/* ❄️ Pequeñas partículas de nieve encima */
+.process-card::after {
+ 
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 1.2em;
+  color: #FFD700;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+  animation: snow-drift 3s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* 🌟 Animaciones */
+@keyframes shimmer-process {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+@keyframes snow-drift {
+  0%, 100% { opacity: 0.8; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(4px); }
+}
+
+/* =========================
+   TARJETA DE PROCESO
+========================= */
+.process-card {
+    background: var(--light-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+/* =========================
+   EFECTO HOVER DINÁMICO
+========================= */
+.process-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   IMAGEN DE PROCESO
+========================= */
+.process-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.process-card img:hover {
+    transform: scale(1.1) rotate(-1deg);
+    filter: brightness(1.1);
+}
+
+/* =========================
+   TÍTULO Y TEXTO
+========================= */
+.process-card h4 {
+    font-size: 1.9em;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    font-size: 1.1em;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* =========================
+   OVERLAY OPCIONAL
+========================= */
+.process-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 193, 7, 0.1); /* Amarillo translúcido */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 20px;
+}
+
+.process-card:hover::before {
+    opacity: 1;
+}
+
+/* =========================
+   ANIMACIÓN DE ENTRADA
+========================= */
+.process-card.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.process-card.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+    .process-card img { height: 200px; }
+}
+
+@media (max-width: 768px) {
+    .process-card img { height: 160px; }
+}
+
+@media (max-width: 480px) {
+    .process-card img { height: 140px; }
+}
+
+/* =========================
+   🎄 PRODUCT CARDS — MODO NAVIDEÑO ELEGANTE
+========================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 🌟 Tarjeta principal */
+.product-card {
+  background: linear-gradient(180deg, #FFF8E1, #FAFAFA);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  border: 2px solid #FFD700; /* borde dorado */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2),
+              0 0 15px rgba(255, 215, 0, 0.3); /* brillo cálido */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ✨ Efecto de brillo lateral */
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -45%;
+  width: 200%;
+  height: 300%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: rotate(25deg);
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* 🌲 Imagen del producto */
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 3px solid #C62828;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(198, 40, 40, 0.4);
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* 🏷️ Título del producto */
+.product-card h3 {
+  color: #2E7D32;
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+/* 💰 Precio */
+.product-card .price {
+  color: #C62828;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* 🎁 Botón festivo */
+.add-to-cart-btn {
+  background: linear-gradient(90deg, #C62828, #2E7D32);
+  color: #FFF8E1;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: 2px solid #FFD700;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: linear-gradient(90deg, #FFD700, #C62828);
+  color: #2E7D32;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
+}
+
+/* 🎇 Luces decorativas navideñas arriba de cada tarjeta */
+.product-card::after {
+
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.2em;
+  color: #FFD700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+  animation: twinkle-lights 2.5s infinite alternate;
+  pointer-events: none;
+}
+
+/* 💫 Animaciones */
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+@keyframes twinkle-lights {
+  0%, 100% { opacity: 0.7; text-shadow: 0 0 8px rgba(255, 215, 0, 0.7); }
+  50% { opacity: 1; text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4),
+              0 0 25px rgba(198, 40, 40, 0.3);
+}
+
+/* =========================
+   NOTES / HIGHLIGHT
+========================= */
+.notes-section {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.notes-section h3 {
+    color: var(--accent-yellow);
+    margin-bottom: 20px;
+}
+
+.notes-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notes-section li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 15px;
+    font-size: 1.15em;
+}
+
+.notes-section li::before {
+    content: '☕';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 1.4em;
+    color: var(--accent-yellow);
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.5; }
+}
+
+/* =========================
+   🎄 FOOTER NAVIDEÑO ELEGANTE
+========================= */
+.main-footer {
+  background: linear-gradient(135deg, #2E7D32, #C62828);
+  color: #FFF8E1;
+  padding: 60px 5%;
+  border-radius: 25px 25px 0 0;
+  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #FFD700;
+}
+
+/* ✨ Brillo festivo animado */
+.main-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.15), transparent 70%),
+              radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 60%);
+  mix-blend-mode: screen;
+  animation: footer-glow 10s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 🌟 Contenido principal */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-column h4 {
+  color: #FFD700;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+  position: relative;
+}
+
+.footer-column h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 50px;
+  height: 3px;
+  background-color: #FFD700;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+.footer-column p, 
+.footer-column a {
+  color: #FFF8E1;
+  font-size: 1.05em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #FFD700;
+  transform: translateX(4px);
+}
+
+/* 🎁 QR o imagen decorativa */
+.qr-footer {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-footer:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
+}
+
+/* 🌨️ Parte inferior */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.95em;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 1;
+}
+.mensaje-navidad::after {
+    content: "🎅 Feliz Navidad & Próspero Año Nuevo 🎄";
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.footer-bottom::before {
+  content: "🎅 Feliz Navidad & Próspero Año Nuevo 🎄";
+  display: block;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 10px;
+  animation: twinkle 3s infinite alternate;
+}
+
+/* 💫 Animaciones */
+@keyframes footer-glow {
+  0% { opacity: 0.5; filter: brightness(1); }
+  50% { opacity: 1; filter: brightness(1.2); }
+  100% { opacity: 0.6; filter: brightness(1); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.7; text-shadow: 0 0 8px rgba(255, 215, 0, 0.8); }
+  50% { opacity: 1; text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+}
+
+
+/* =========================
+   RESPONSIVE FOOTER
+========================= */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
+    }
+    .qr-footer {
+        margin: 0 auto;
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+    .story-segment {
+        flex-direction: column;
+    }
+    .story-segment.segment-reverse {
+        flex-direction: column;
+    }
+    .segment-image img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 350px;
+    }
+    .hero-title { font-size: 3em; }
+    .hero-subtitle { font-size: 1.4em; }
+    .product-card img { height: 180px; }
+    .process-card img { height: 160px; }
+    .segment-image img { height: 250px; }
+}
+/* Modo oscuro */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+
+body.dark-mode .navbar {
+    background: linear-gradient(90deg, var(--secondary-brown), var(--primary-green));
+}
+
+body.dark-mode .process-card,
+body.dark-mode .product-card,
+body.dark-mode .story-segment {
+    background: #3E2723; /* Marrón oscuro */
+    color: var(--text-light);
+}
+
+body.dark-mode .process-card h4,
+body.dark-mode .product-card h4,
+body.dark-mode .segment-text h3 {
+    color: var(--accent-yellow);
+}
+
+body.dark-mode a {
+    color: var(--accent-yellow);
+}
+
+body.dark-mode .add-to-cart-btn {
+    background-color: var(--accent-yellow);
+    color: var(--secondary-brown);
+}
+
+body.dark-mode .add-to-cart-btn:hover {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+}
+body.dark-mode .notes-section {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+}
+
+/* === SECCIÓN DE NOVEDADES === */
+.news-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fff8f0, #fce7d0);
+  color: #3a2e2a;
+  transition: background 0.3s, color 0.3s;
+}
+
+.news-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #6d3f1f;
+  text-shadow: 1px 1px 2px #f0d3a7;
+}
+
+/* Contenedor general del carrusel */
+.carousel-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Pista del carrusel */
+.carousel {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Cada elemento del carrusel */
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 40px 20px;
+  background: #fff;
+  transition: background 0.3s;
+}
+
+/* Imagen del carrusel: se muestra completa */
+.carousel-item img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: #f6f1e7;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   🎠 CARRUSEL NAVIDEÑO CON RENOS
+========================= */
+
+/* 🎄 Texto del carrusel */
+.carousel-item h4 {
+  font-size: 1.5rem;
+  color: #C62828; /* rojo navideño */
+  margin: 10px 0;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4),
+               0 0 12px rgba(198, 40, 40, 0.3);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+.carousel-item p {
+  font-size: 1.05rem;
+  color: #2E7D32; /* verde pino */
+  line-height: 1.6;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+@keyframes glowText {
+  0% { text-shadow: 0 0 10px rgba(255,215,0,0.4); }
+  100% { text-shadow: 0 0 20px rgba(255,0,0,0.6); }
+}
+
+/* =========================
+   🎁 BOTONES DE NAVEGACIÓN
+========================= */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #C62828, #FFD700); /* rojo + dorado */
+  border: 2px solid #FFD700;
+  color: #fff8f0;
+  font-weight: bold;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  transform: translateY(-50%) scale(1.15);
+  background: linear-gradient(135deg, #FFD700, #C62828);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+}
+
+.carousel-btn.prev {
+  left: 20px;
+}
+
+.carousel-btn.next {
+  right: 20px;
+}
+
+/* 🦌 Animación de renos decorativos */
+.carousel-btn::after {
+  
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 1.4em;
+  color: #FFD700; /* dorado */
+  opacity: 0;
+  animation: reindeer 2.5s infinite ease-in-out;
+}
+
+@keyframes reindeer {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg) translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(-10deg) translateY(-4px);
+  }
+}
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #d62828;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+.music-btn:hover {
+    background: #b71c1c;
+}
+
+
+
+/* ============================================================
+   ❄️ NIEVE ANIMADA
+============================================================ */
+@keyframes snowflakes {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: var(--snow);
+  font-size: 1.2rem;
+  opacity: 0.9;
+  animation: snowflakes linear infinite;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Distintas posiciones y duraciones */
+.snowflake:nth-child(1) { left: 10%; animation-duration: 9s; }
+.snowflake:nth-child(2) { left: 30%; animation-duration: 11s; }
+.snowflake:nth-child(3) { left: 50%; animation-duration: 13s; }
+.snowflake:nth-child(4) { left: 70%; animation-duration: 10s; }
+.snowflake:nth-child(5) { left: 90%; animation-duration: 12s; }
+}
