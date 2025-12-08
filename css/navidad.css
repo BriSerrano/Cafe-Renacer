@@ -1221,6 +1221,12 @@ button {
   position: relative;
   z-index: 1;
 }
+.add-to-cart-btn {
+    position: relative;
+    z-index: 5 !important;
+    cursor: pointer;
+}
+
 
 /* 🌟 Tarjeta principal */
 .product-card {
