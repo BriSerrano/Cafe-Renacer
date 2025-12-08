@@ -226,16 +226,21 @@ playBtn.addEventListener("click", () => {
 </script>
 
 <script>
-const whatsappNumber = "50660073737"; // Número sin guion y con código de país
+document.addEventListener("DOMContentLoaded", function() {
 
-document.querySelectorAll(".add-to-cart-btn").forEach(button => {
-    button.addEventListener("click", () => {
-        const productName = button.closest(".product-card").querySelector("h3").innerText;
-        const encoded = encodeURIComponent(`Hola! Quiero comprar el ${productName}`);
-        window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, "_blank");
+    const whatsappNumber = "50660073737";
+
+    document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            const productName = button.closest(".product-card").querySelector("h3").innerText;
+            const encoded = encodeURIComponent(`Hola! Quiero comprar el ${productName}`);
+            window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, "_blank");
+        });
     });
+
 });
 </script>
+
 
 
 <script>
