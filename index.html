@@ -9,40 +9,46 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="css/navidad.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- ❄ Animación de nieve -->
+<!-- ❄ Animación de nieve
 <div class="snow-container">
     <div class="snowflake">❅</div>
     <div class="snowflake">❆</div>
     <div class="snowflake">❄</div>
     <div class="snowflake">❅</div>
     <div class="snowflake">❆</div>
-</div>
+</div> -->
 
-<!-- Botón de música -->
+<!-- Botón de música
 <button id="play-music" class="music-btn">🎄 Música Navideña</button>
 <audio id="navidad-audio" loop>
     <source src="musica/navidad.mp3" type="audio/mpeg">
-</audio>
+</audio> -->
 
 <!-- ---------------------- HEADER ------------------------- -->
 <header class="main-header">
-    <nav class="navbar">
-        <div class="logo">
-            <img src="img/logo_renacer.png" alt="Logo Renacer">
-        </div>
+  <nav class="navbar">
+    <div class="logo">
+        <img src="img/logo_renacer.png" alt="Logo Renacer">
+    </div>
 
-        <ul class="nav-links">
-            <li><a href="#historia">Historia</a></li>
-            <li><a href="#procesos">Procesos</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+    <!-- 🎆 Mensaje Año Nuevo -->
+    <div class="new-year-message">
+        🎉 ¡Feliz Año Nuevo 2026! ☕✨
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#procesos">Procesos</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
 
     <div class="hero-banner">
         <img src="img/banner.png" alt="Cafetal de Costa Rica">
@@ -114,36 +120,43 @@
     </div>
 </section>
 
-<!-- ---------------------- NOVEDADES ------------------------- -->
+<!-- ---------------------- DATOS CURIOSOS ------------------------- -->
 <section class="news-section">
-    <h2>✨ Novedades ✨</h2>
+    <h2>☕ Datos curiosos del café</h2>
 
     <div class="carousel-container">
         <button class="carousel-btn prev">❮</button>
 
         <div class="carousel">
             <div class="carousel-item card">
-                <img src="img/rompope.png" alt="Rompope artesanal">
-                <h4>Rompope artesanal</h4>
-                <p>Edición limitada para compartir en esta temporada navideña.</p>
+                <img src="img/flor.jpeg" alt="Origen del café">
+                <h4>Origen milenario</h4>
+                <p>El café fue descubierto en Etiopía hace más de mil años, cuando se notó su efecto energético.</p>
             </div>
 
             <div class="carousel-item card">
-                <img src="img/licor.png" alt="Licor de café">
-                <h4>Promoción de Temporada</h4>
-                <p>Disfruta nuestro licor de café ideal para tus celebraciones.</p>
+                <img src="img/tostado.png" alt="Tueste del café">
+                <h4>El tueste lo cambia todo</h4>
+                <p>El nivel de tueste define el aroma, el sabor y la intensidad del café.</p>
             </div>
 
             <div class="carousel-item card">
-                <img src="img/navideña2.png" alt="Ediciones navideñas">
-                <h4>¡¡¡Navidad a lo Chito!!!</h4>
-                <p>Ediciones especiales de temporada. ¡No te las pierdas!</p>
+                <img src="img/cf.jpeg" alt="Café de Costa Rica">
+                <h4>Café de Costa Rica</h4>
+                <p>Costa Rica es reconocida mundialmente por su café 100% arábica de alta calidad.</p>
+            </div>
+
+            <div class="carousel-item card">
+                <img src="img/cosecha.jpeg" alt="Café fresco">
+                <h4>Más fresco, mejor</h4>
+                <p>El café recién molido conserva mejor su aroma y sabor que el café almacenado.</p>
             </div>
         </div>
 
         <button class="carousel-btn next">❯</button>
     </div>
 </section>
+
 
 <!-- ---------------------- PRODUCTOS ------------------------- -->
 <section id="productos" class="products-section">
@@ -212,7 +225,7 @@
     </p>
 </footer>
 
-<!-- ---------------------- SCRIPTS ------------------------- -->
+<!-- ---------------------- SCRIPTS -------------------------
 <script>
 const music = document.getElementById("navidad-audio");
 const playBtn = document.getElementById("play-music");
@@ -226,7 +239,7 @@ playBtn.addEventListener("click", () => {
         playBtn.textContent = "🎄 Música Navideña";
     }
 });
-</script>
+</script> -->
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {

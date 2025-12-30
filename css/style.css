@@ -534,6 +534,21 @@ button {
     color: var(--secondary-brown);
     transform: translateY(-3px) scale(1.05);
 }
+.new-year-message {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #F5E6C8;              /* claro y contrastante */
+    background: rgba(0, 0, 0, 0.25);
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
 
 /* =========================
    NOTES / HIGHLIGHT
